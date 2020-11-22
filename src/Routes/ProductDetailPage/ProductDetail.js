@@ -32,10 +32,6 @@ export default function ProductDetail() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    console.log(items)
-
-
-
     return (
         <div className="product-detail-container">
             <div className="product-detail-image">
