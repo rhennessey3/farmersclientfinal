@@ -4,7 +4,14 @@ import './ProductDetail.css'
 import { API_ENDPOINT } from '../../config'
 
 const defaultState = {
-    items: []
+date_created: "",
+description: "",
+id: 0,
+img: "",
+itemcount: "",
+itemprice: "",
+name: "",
+users_id: 0,
 }
  
 export default function ProductDetail() {
