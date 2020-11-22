@@ -27,7 +27,7 @@ export default function ProductDetail() {
 
     console.log(items)
 
-    const itm = items&&items.length? items[0] : null;
+
 
     return (
         <div className="product-detail-container">
@@ -38,21 +38,21 @@ export default function ProductDetail() {
 
                 <div className="product-detail-item-name">
                     <h5>
-                        {itm? itm.name : ''}
+                        {items.name}
                     </h5>
                 </div>
 
                 <div className="product-detail-item-price-container">
                     <div className="product-detail-item-price tag">
-                        <p>${itm? itm.itemprice : ''}</p>
+                        <p>${items.itemprice}</p>
                     </div>
                     <div className="product-detail-item-availability tag">
-                        <p>Available: {itm? itm.itemcount : ''}</p>
+                        <p>Available: {items.itemcount}</p>
                     </div>
                 </div>
             </div>
             <div className="product-detail-item-description">
-                <p>{itm? itm.description : ''}</p>
+                <p>{items.description}</p>
             </div>
         </div>
     )
