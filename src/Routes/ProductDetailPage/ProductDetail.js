@@ -30,7 +30,7 @@ export default function ProductDetail() {
     useEffect(() => {
         getItem()
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [id]);
+    }, []);
 
     console.log(items)
 
