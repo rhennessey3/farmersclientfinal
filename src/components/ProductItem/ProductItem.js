@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function ProductItem(props) {
     return (
         <>
-            <Link to={"/inventory/details/" + props.item.id}>
+            <Link to={`/inventory/details/${props.item.id}`}>
                 <div className="product-item-container">
                     <div className="product-item-photo">
                         <img src="https://picsum.photos/120/120" alt="food" />
