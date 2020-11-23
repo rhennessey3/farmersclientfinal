@@ -25,12 +25,13 @@ class Login extends React.Component {
         try {
         //   setLoading(true)
           const {email, password} = this.state;
-          const response = await AuthApiService.login(email, password)
+          AuthApiService.login(email, password)
+          .then(response => {
         //   setLoading(false)
-    
           this.context.login(response.authToken)
           this.context.setCurrentUser(response.user)
-          this.state.loggedin = true;
+          this.setState({loggedin: true})
+          })
         } catch(err) {
            this.setState({error: err.message})
         }

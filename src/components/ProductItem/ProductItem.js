@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom'
 export default function ProductItem(props) {
     return (
         <>
-            <Link to={`/inventory/details/${props.item.id}`}>
-                <div className="product-item-container">
+                <div className="product-item-container" onClick={()=> props.history.push(`/inventory/details/${props.item.id}`)}>
                     <div className="product-item-photo">
                         <img src="https://picsum.photos/120/120" alt="food" />
                     </div>
@@ -21,7 +20,6 @@ export default function ProductItem(props) {
                         <p>{props.item.itemcount}</p>
                     </div>
                 </div>
-            </Link>
         </>
     );
 }

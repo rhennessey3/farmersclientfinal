@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === 'production') {
   apiPath = 'https://farmers-bazaar-api.herokuapp.com/api'
   
 } else {
-  apiPath = 'http://localhost:8000/api'
+  apiPath = 'https://farmers-bazaar-api.herokuapp.com/api'
   tokenKey = 'bazaar-dev-auth-token'
 }
 
