@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import AuthContext from '../../context/AuthContext'
 import './NavBar.css'
-import TokenService from '../services/TokenService';
+import TokenService from '../../services/TokenService';
 
 
 export default class NavBar extends Component {
