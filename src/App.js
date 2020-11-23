@@ -23,12 +23,16 @@ export default class App extends React.Component {
       <AuthProvider>
           <div className='App'>
             <Header />
-            <BackButton />
+          <BackButton />
+          
+          <switch>
+            <PrivateRoute exact path='/inventory' component={Inventory} />
+            <PrivateRoute path='/add' component={AddItemPage} />
+          </switch>
+
             <Switch>
               <PublicRoute exact path='/' component={LandingPage} />
               <PublicRoute path='/home' component={HomePage} />
-              <PrivateRoute exact path='/inventory' component={Inventory} />
-              <PrivateRoute path='/add' component={AddItemPage} />
               <PublicRoute path='/signup' component={SignUpPage} />
               <PublicRoute path='/login' component={LogInPage} />
               <PublicRoute path='/inventory/details/:id' component={ProductDetail} />
