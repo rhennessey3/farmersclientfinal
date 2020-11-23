@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import AuthContext from '../../context/AuthContext'
 import TokenService from '../../services/TokenService'
 import './NavBar.css'
+import TokenService from '../services/TokenService';
 
 
 export default class NavBar extends Component {
@@ -32,13 +33,11 @@ export default class NavBar extends Component {
                     <div className="logo"></div>
                     <div className="menu">
                         <ul>
-                            {/* <li><Link to="/">Landing Page</Link></li> */}
-                            {/* <li><Link to="/home">Home Page</Link></li>
-                            <li><Link to="/signup">Sign up</Link></li> */}
                             <li><Link to="/add">Add Item</Link></li>
+
                             <li><Link to="/login" onClick={() => this.logoutUser()}>{TokenService.hasAuthToken() ? "Logout" : "Login"}</Link></li>
-                            {/* <li><Link to="/inventory">Inventory</Link></li>
-                            <li><Link to="/details">Product Detail</Link></li> */}
+
+  
                         </ul>
                     </div>
                 </div>
