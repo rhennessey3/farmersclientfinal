@@ -3,19 +3,21 @@ import { useParams } from 'react-router-dom'
 import './ProductDetail.css'
 import { API_ENDPOINT } from '../../config'
 
-const defaultState = {
-date_created: "",
-description: "",
-id: 0,
-img: "",
-itemcount: "",
-itemprice: "",
-name: "",
-users_id: 0,
-}
+
  
 export default function ProductDetail() {
-    const [items, setItems] = useState(defaultState);
+    const [items, setItems] = useState(
+        {
+            date_created: "",
+            description: "",
+            id: 0,
+            img: "",
+            itemcount: "",
+            itemprice: "",
+            name: "",
+            users_id: 0,
+        }
+    );
     let { id } = useParams();
 
     const getItem = () => {
@@ -29,7 +31,6 @@ export default function ProductDetail() {
 
     useEffect(() => {
         getItem()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
