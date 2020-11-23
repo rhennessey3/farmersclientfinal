@@ -1,7 +1,8 @@
 import React from 'react';
+
 import './App.css';
 import './global/normalize.css'
-import { Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import PublicRoute from '../src/Utils/PublicRoute'
 import PrivateRoute from '../src/Utils/PrivateRoute'
 import Header from '../src/components/Header/Header'
@@ -31,7 +32,7 @@ export default class App extends React.Component {
               <PrivateRoute path='/add' component={AddItemPage} />
               <PublicRoute path='/signup' component={SignUpPage} />
               <PublicRoute path='/login' component={LogInPage} />
-              <PublicRoute path='/inventory/details/:id' component={ProductDetail} />
+              <PrivateRoute path='/inventory/details/:id' component={ProductDetail} />
             </Switch>
           </div>
       </AuthProvider>

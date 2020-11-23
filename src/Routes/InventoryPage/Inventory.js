@@ -6,7 +6,7 @@ import { API_ENDPOINT } from '../../config';
 
 
 
-export default function Inventory() {
+export default function Inventory(props) {
   const [items, setItems] = useState([]);
   const getItems = () => {
     fetch(`${API_ENDPOINT}/items`)
@@ -22,7 +22,7 @@ export default function Inventory() {
       <Search />
       <div className='inventory-page-container'>
           {items.map(item => (
-              <ProductItem key={item.id} item={item} />
+              <ProductItem key={item.id} item={item} history={props.history}/>
             ))
           }
       </div>
