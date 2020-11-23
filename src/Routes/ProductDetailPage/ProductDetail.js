@@ -22,7 +22,7 @@ export default function ProductDetail() {
         fetch(`${API_ENDPOINT}/items/${id}`)
             .then(res => res.json())
             .then(item => {
-                console.log(item)
+            
                 setItems(item)
             })
     }

@@ -41,7 +41,7 @@ const AuthApiService = {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${TokenService.getAuthToken()}`
-        //console.log(current-user)
+  
       }
     })
 
