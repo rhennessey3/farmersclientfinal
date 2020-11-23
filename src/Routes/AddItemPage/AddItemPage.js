@@ -32,7 +32,7 @@ class AddItemPage extends React.Component {
 
     };
 
-    console.log(item );
+
 
     return fetch(`${API_ENDPOINT}/items`, {
       method: "post",
@@ -46,15 +46,15 @@ class AddItemPage extends React.Component {
     .then((response) => response.json())
 
             .then((data) => {
-                console.log(data)
+             
                 // this.setState({
                 //     recipesFound: data.results
                 // });
-                //console.log(this.state)
+               
             })
 
             .catch((err) => {
-                console.log(err);
+            
             });
 
   };
@@ -76,7 +76,7 @@ class AddItemPage extends React.Component {
       <VendorContext.Consumer>
         {(value) => (
           <div className="form-container">
-            {console.log('hello', user)}
+      
             <form className="forms" onSubmit={(e) => this.onSubmit(e, user.currentUser.id)}>
               <h1>Add to your Inventory!</h1>
               <div className="form">

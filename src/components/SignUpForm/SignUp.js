@@ -34,7 +34,7 @@ import AuthApiService from '../../services/auth-api-service'
         delete newUser.emailValid
 
 
-        console.log('aaaaa', newUser)
+     
         // const {setLoading} = this.props.VendorContext
         try {
             // setLoading(true)
@@ -87,7 +87,7 @@ import AuthApiService from '../../services/auth-api-service'
         }
 
         this.setState({ emailValid, validationError }, this.validateForm)
-        console.log(email)
+       
     }
 
     validatePassword = () => {
@@ -102,13 +102,13 @@ import AuthApiService from '../../services/auth-api-service'
             passwordValid = false
             validationError.password = 'must be between 6 and 72 characters'
         }
-        console.log(password,passwordValid,validationError)
+   
         this.setState({passwordValid, validationError}, this.validateForm)
     }
 
     render() {
         const {validationError, emailValid, passwordValid, formValid} = this.state
-        console.log(validationError, emailValid,passwordValid,formValid)
+
         return (
             <form className='js-registration-form' action='#' onSubmit={this.handleSubmit}>
                 <div className='error-msg'>{this.validationError}</div>
