@@ -21,24 +21,18 @@ class Login extends React.Component {
         this.setState({
             error: null,
         })
-        // const {setLoading} = this.props.appContext
-        try {
-        //   setLoading(true)
           const {email, password} = this.state;
           AuthApiService.login(email, password)
           .then(response => {
-        //   setLoading(false)
           this.context.login(response.authToken)
           this.context.setCurrentUser(response.user)
           this.setState({loggedin: true})
           })
-        } catch(err) {
-           this.setState({error: err.message})
-        }
-
-        if (this.state.loggedin) {
-            this.props.history.push('/add')
-        }
+          .then(response =>{
+            if (this.state.loggedin) {
+                return this.props.history.push('/add')
+            } 
+          })
         
     }
     
