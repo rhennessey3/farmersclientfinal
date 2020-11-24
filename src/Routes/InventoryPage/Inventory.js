@@ -21,10 +21,10 @@ export default function Inventory(props) {
     <>
       <Search />
       <div className='inventory-page-container'>
-          {items.map(item => (
-              <ProductItem key={item.id} item={item} history={props.history}/>
-            ))
-          }
+        {items.map(item => (
+          <ProductItem key={item.id} item={item} history={props.history} />
+        ))
+        }
       </div>
     </>
   );

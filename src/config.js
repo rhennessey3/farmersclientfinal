@@ -4,7 +4,7 @@ let tokenKey;
 if (process.env.NODE_ENV === 'production') {
 
   apiPath = 'https://farmers-bazaar-api.herokuapp.com/api'
-  
+
 } else {
   apiPath = 'https://farmers-bazaar-api.herokuapp.com/api'
   tokenKey = 'bazaar-dev-auth-token'
@@ -13,10 +13,9 @@ if (process.env.NODE_ENV === 'production') {
 let API_ENDPOINT = apiPath;
 let TOKEN_KEY = tokenKey;
 
-export  {
+export {
   API_ENDPOINT,
   TOKEN_KEY
 }
-
 
 

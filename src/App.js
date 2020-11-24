@@ -22,24 +22,19 @@ export default class App extends React.Component {
   render() {
     return (
       <AuthProvider>
-          <div className='App'>
-            <Header />
+        <div className='App'>
+          <Header />
           <BackButton />
-          
-          <switch>
+          <Switch>
+            <PublicRoute exact path='/' component={LandingPage} />
+            <PublicRoute path='/home' component={HomePage} />
             <PrivateRoute exact path='/inventory' component={Inventory} />
             <PrivateRoute path='/add' component={AddItemPage} />
-            
-          </switch>
-
-            <Switch>
-              <PublicRoute exact path='/' component={LandingPage} />
-              <PublicRoute path='/home' component={HomePage} />
-              <PublicRoute path='/signup' component={SignUpPage} />
-              <PublicRoute path='/login' component={LogInPage} />  
+            <PublicRoute path='/signup' component={SignUpPage} />
+            <PublicRoute path='/login' component={LogInPage} />
             <PrivateRoute path='/inventory/details/:id' component={ProductDetail} />
-            </Switch>
-          </div>
+          </Switch>
+        </div>
       </AuthProvider>
     );
   }

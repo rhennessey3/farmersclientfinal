@@ -14,32 +14,38 @@ class Login extends React.Component {
         email: '',
         password: '',
         loggedin: false,
-      }
+    }
 
     handleSubmit = async (e) => {
         e.preventDefault();
         this.setState({
             error: null,
         })
-          const {email, password} = this.state;
-          AuthApiService.login(email, password)
-          .then(response => {
-          this.context.login(response.authToken)
-          this.context.setCurrentUser(response.user)
-          this.setState({loggedin: true})
-          })
-          .then(response =>{
-            if (this.state.loggedin) {
-                return this.props.history.push('/add')
-            } 
-          })
-        
+        // const {setLoading} = this.props.appContext
+        try {
+            //   setLoading(true)
+            const { email, password } = this.state;
+            AuthApiService.login(email, password)
+                .then(response => {
+                    //   setLoading(false)
+                    this.context.login(response.authToken)
+                    this.context.setCurrentUser(response.user)
+                    this.setState({ loggedin: true })
+                })
+        } catch (err) {
+            this.setState({ error: err.message })
+        }
+
+        if (this.state.loggedin) {
+            this.props.history.push('/add')
+        }
+
     }
-    
+
     componentWillUnmount() {
-        this.setState({error: null})
+        this.setState({ error: null })
     }
-    
+
     handleChange = ({ target: { name, value } }) => {
         this.setState({
             [name]: value
@@ -47,12 +53,12 @@ class Login extends React.Component {
     }
 
     render() {
-       
+
 
         return (
             <form className='js-login-form' action='#' onSubmit={(e) => this.handleSubmit(e)}>
                 <div className='error-msg'>{this.state.error}</div>
-            
+
 
                 <div className='form-group'>
                     <label for="email">Enter email</label>
@@ -82,13 +88,13 @@ class Login extends React.Component {
                 <div className='form-controls'>
                     <button type="submit">Submit</button>
                 </div>
-                
+
                 <div>
                     <p>Don't have an account? Sign Up <a href="/signup" alt="">Here</a></p>
                 </div>
             </form>
         )
-    }   
+    }
 }
 
 export default withRouter(Login);
