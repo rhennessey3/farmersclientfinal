@@ -33,11 +33,11 @@ export default class NavBar extends Component {
                     <div className="logo"></div>
                     <div className="menu">
                         <ul>
-                            <li><Link to="/add">Add Item</Link></li>
+                            {TokenService.hasAuthToken() ? (<li><Link to="/add">Add Item</Link></li>) : ""}
 
                             <li><Link to="/login" onClick={() => this.logoutUser()}>{TokenService.hasAuthToken() ? "Logout" : "Login"}</Link></li>
 
-  
+
                         </ul>
                     </div>
                 </div>

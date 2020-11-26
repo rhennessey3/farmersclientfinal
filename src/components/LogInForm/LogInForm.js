@@ -31,15 +31,11 @@ class Login extends React.Component {
                     this.context.login(response.authToken)
                     this.context.setCurrentUser(response.user)
                     this.setState({ loggedin: true })
+                    this.props.history.push('/add')
                 })
         } catch (err) {
             this.setState({ error: err.message })
         }
-
-        if (this.state.loggedin) {
-            this.props.history.push('/add')
-        }
-
     }
 
     componentWillUnmount() {
