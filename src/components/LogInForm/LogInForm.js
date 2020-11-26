@@ -59,10 +59,11 @@ class Login extends React.Component {
             <form className='js-login-form' action='#' onSubmit={(e) => this.handleSubmit(e)}>
                 <div className='error-msg'>{this.state.error}</div>
 
-
+                <div className="login-info">
                 <div className='form-group'>
                     <label for="email">Enter email</label>
                     <input
+                        className="input"
                         type="text"
                         value={this.state.email}
                         name="email"
@@ -76,6 +77,7 @@ class Login extends React.Component {
                 <div className='form-group'>
                     <label for="psw">Enter password</label>
                     <input
+                        className="input"
                         type="password"
                         //value={this.state.password}
                         name="password"
@@ -84,9 +86,10 @@ class Login extends React.Component {
                         required
                     />
                 </div>
+                </div>
 
                 <div className='form-controls'>
-                    <button type="submit">Submit</button>
+                    <button className="login-button" type="submit">Submit</button>
                 </div>
 
                 <div>

@@ -161,7 +161,7 @@ class AddItemPage extends React.Component {
                 </div>
               </div>
               <div className="form-button">
-                <button type="submit">Add Item</button>
+                <button className="add-button" type="submit">Add Item</button>
               </div>
 
               <div>

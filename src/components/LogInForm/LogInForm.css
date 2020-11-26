@@ -1,7 +1,56 @@
-.form-group {
-    padding: 10px;
-}
 
 form label {
-    padding: 0 5px;
+    padding-bottom: 1px;
+}
+
+label {
+    color: #354a69;
+}
+
+.login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 260px;
+    background-color: #354a69;    
+    border: 0;
+    box-shadow: none;
+    border-radius: 0px;
+    color: white;
+    margin: 25px;
+}
+
+
+.js-login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 400px;
+}
+
+.login-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+
+.input {
+    padding: 5px;
+    border: solid 1.7px #354a69;    
+    display: flex;
+    margin-bottom: 12px;
+
+}
+
+.form-group {
+    margin: 15px;
+    text-align: left;
+}
+
+a {
+    color: #354a69;
 }

@@ -3,8 +3,10 @@
   justify-content: space-between;
   text-align: center;
   font-family: "Gotham";
-  border: 1px solid #354a69;
+  border: 1px solid #06235056;
   border-radius: 2px;
+  /* height: 10px; */
+  margin: 20px 400px;
 }
 
 .form-search input {

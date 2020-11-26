@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProductItem.css";
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 
 export default function ProductItem(props) {
     return (
@@ -14,10 +14,10 @@ export default function ProductItem(props) {
                 </div>
 
                 <div className="product-item-price">
-                    <p>{props.item.itemprice}</p>
+                    <p>Price: {props.item.itemprice}</p>
                 </div>
                 <div className="product-item-available">
-                    <p>{props.item.itemcount}</p>
+                    <p>Available: {props.item.itemcount}</p>
                 </div>
             </div>
         </>

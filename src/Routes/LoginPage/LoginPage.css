@@ -1,6 +1,12 @@
 .LoginPage {
-    border: 1px rgba(0, 0, 0, 0.344) solid;
-    padding: 40px;
-    margin: 5% 30%;
+    border-left: 1px rgba(0, 0, 0, 0.261) solid;
+    border-right: 1px rgba(0, 0, 0, 0.261) solid;
+    padding: 10px 60px;
+    margin: 0% 30%;
     text-align: center;
+
+}
+
+img {
+    margin: 20px;
 }

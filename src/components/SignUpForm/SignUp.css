@@ -1,0 +1,22 @@
+.register-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 260px;
+    background-color: #354a69;    
+    border: 0;
+    box-shadow: none;
+    border-radius: 0px;
+    color: white;
+    margin: 25px;
+}
+
+.js-registration-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 400px;
+}

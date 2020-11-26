@@ -116,6 +116,7 @@ import AuthApiService from '../../services/auth-api-service'
                     <label for="email">Email</label>
                     <Validator isValid={emailValid} msg={validationError.email} />
                     <input
+                        className="input"
                         type="text"
                         value={this.state.email}
                         name="email"
@@ -131,6 +132,7 @@ import AuthApiService from '../../services/auth-api-service'
                     <label for="psw">Password</label>
                     <Validator isValid={passwordValid} msg={validationError.password} />
                     <input
+                        className="input"
                         type="password"
                         name="password"
                         id="psw"
@@ -144,6 +146,7 @@ import AuthApiService from '../../services/auth-api-service'
                     <label for="psw">Confirm Password</label>
                     <Validator isValid={passwordValid} msg={validationError.password} />
                     <input
+                        className="input"
                         type="password"
                         name="psw"
                         id="psw"
@@ -156,6 +159,7 @@ import AuthApiService from '../../services/auth-api-service'
                 <div className="form-group">
                     <label for="farm-name">Name of Farm</label>
                     <input
+                        className="input"
                         type="farm"
                         name="farm_name"
                         id="farm"
@@ -168,6 +172,7 @@ import AuthApiService from '../../services/auth-api-service'
                 <div className="form-group">
                     <label for="address">Street Address</label>
                     <input
+                        className="input"
                         type="address"
                         name="street_address"
                         id="address"
@@ -180,6 +185,7 @@ import AuthApiService from '../../services/auth-api-service'
                 <div className="form-group">
                     <label for="city">City</label>
                     <input
+                        className="input"
                         type="city"
                         name="city"
                         id="city"
@@ -192,6 +198,7 @@ import AuthApiService from '../../services/auth-api-service'
                 <div className="form-group">
                     <label for="state">State</label>
                     <input
+                        className="input"
                         type="state"
                         name="state"
                         id="state"
@@ -204,6 +211,7 @@ import AuthApiService from '../../services/auth-api-service'
                 <div className="form-group">
                     <label for="zip">Zip Code</label>
                     <input
+                        className="input"
                         type="zip"
                         name="zip"
                         id="zip"
@@ -214,7 +222,7 @@ import AuthApiService from '../../services/auth-api-service'
                 </div>
 
                 <div className="form-controls">
-                    <button disabled={!formValid} type="submit">Submit</button>
+                    <button className="register-button" disabled={!formValid} type="submit">Submit</button>
                 </div>
             </form>
         )

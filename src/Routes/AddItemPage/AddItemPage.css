@@ -1,11 +1,31 @@
 .forms {
-  border: 1px black solid;
-  padding: 30px;
-  margin: 5% 25%;
+  border-left: 1px rgba(0, 0, 0, 0.261) solid;
+  border-right: 1px rgba(0, 0, 0, 0.261) solid;
+  padding: 40px;
+  margin: 0% 30%;
   text-align: center;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
 }
 
 .form {
   padding: 10px;
+  text-align: left;
+}
+
+.add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 260px;
+    background-color: #354a69;    
+    border: 0;
+    box-shadow: none;
+    border-radius: 0px;
+    color: white;
+    margin: 25px;
 }
