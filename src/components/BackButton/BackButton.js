@@ -8,7 +8,7 @@ export default function BackButton() {
   const isAddItemPage = useRouteMatch('/add')?.isExact
   return (
     <>
-      {isLandingPage, isAddItemPage || <button onClick={() => history.goBack()}>Back</button>}
+      {isLandingPage || isAddItemPage || <button onClick={() => history.goBack()}>Back</button>}
     </>
   );
 }
