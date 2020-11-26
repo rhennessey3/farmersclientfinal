@@ -110,6 +110,7 @@ import AuthApiService from '../../services/auth-api-service'
         const {validationError, emailValid, passwordValid, formValid} = this.state
 
         return (
+            <>
             <form className='js-registration-form' action='#' onSubmit={this.handleSubmit}>
                 <div className='error-msg'>{this.validationError}</div>
                 <div className="form-group">
@@ -216,7 +217,11 @@ import AuthApiService from '../../services/auth-api-service'
                 <div className="form-controls">
                     <button disabled={!formValid} type="submit">Submit</button>
                 </div>
-            </form>
+                </form>
+                <div>
+                    <p>Already have an account? Sign In <a href="/login" alt="">Here</a></p>
+                </div>
+            </>
         )
     }
 }
