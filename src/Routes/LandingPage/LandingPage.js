@@ -38,7 +38,7 @@ export default function LandingPage() {
                       </Link>
           </div>
         </div>
-        <div className="landing-page-how-it-works-container">
+        {/* <div className="landing-page-how-it-works-container">
           <div className="landing-page-how-it-works-consumers">
             <img src={basketicon} alt="" />
           </div>
@@ -52,7 +52,7 @@ export default function LandingPage() {
                           <h4>Shop local now</h4>
                       </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
