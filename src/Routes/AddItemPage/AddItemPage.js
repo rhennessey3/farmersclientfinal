@@ -47,10 +47,6 @@ class AddItemPage extends React.Component {
 
             .then((data) => {
              
-                // this.setState({
-                //     recipesFound: data.results
-                // });
-               
             })
 
             .catch((err) => {
@@ -65,9 +61,10 @@ class AddItemPage extends React.Component {
     this.setState = {
       formComplete: true,
     };
-
-    this.props.history.push("/inventory");
+    
+    then(this.props.history.push("/inventory"))
   };
+  
 
   render() {
     return (
