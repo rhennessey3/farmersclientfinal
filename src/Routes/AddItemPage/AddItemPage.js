@@ -79,18 +79,20 @@ class AddItemPage extends React.Component {
       
             <form className="forms" onSubmit={(e) => this.onSubmit(e, user.currentUser.id)}>
               <h1>Add to your Inventory!</h1>
-              <div className="form">
-                <label className="vendorName--label" htmlFor="vendorName">
+              <div className="img-form">
+                <label className="img-field-lablel" htmlFor="vendorName">
                   Item img
                 </label>
-                <div>
-                  <input
+                <div className="img-field">
+                    <input className="img-field-input"
+                    type="hidden"
                     id="img"
                     name="img"
                     className="Item img--input"
                     type="text"
                     maxLength="255"
                     required
+                    value="img"
                   />
                 </div>
               </div>
