@@ -32,8 +32,6 @@ class AddItemPage extends React.Component {
 
     };
 
-
-
     return fetch(`${API_ENDPOINT}/items`, {
       method: "post",
       headers: {
@@ -44,15 +42,10 @@ class AddItemPage extends React.Component {
       body: JSON.stringify(item),
     })
     .then((response) => response.json())
-
-            .then((data) => {
-             
+            .then((data) => {        
             })
-
-            .catch((err) => {
-            
+            .catch((err) => {      
             });
-
   };
 
   onSubmit = async (e, id) => {
@@ -62,7 +55,7 @@ class AddItemPage extends React.Component {
       formComplete: true,
     };
     
-    then(this.props.history.push("/inventory"))
+    this.props.history.push("/inventory");
   };
   
 
