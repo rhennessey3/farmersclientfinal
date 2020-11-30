@@ -1,46 +1,50 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import AuthContext from '../../context/AuthContext'
-import TokenService from '../../services/TokenService'
-import './NavBar.css'
-
-
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import AuthContext from '../../context/AuthContext';
+import TokenService from '../../services/TokenService';
+import './NavBar.css';
 
 export default class NavBar extends Component {
-    static contextType = AuthContext;
-    
-    constructor(props) {
-        super(props)
-        this.state = {
-            isLoggedin: false,
-        };
-        this.logoutUser = this.logoutUser.bind(this);
-    }
-   
+  static contextType = AuthContext;
 
-    logoutUser = () => {
-        this.context.logout();
-        this.setState ({
-            isLoggedIn: !this.state.isLoggedin,
-        })
-     
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoggedin: false,
+    };
+    this.logoutUser = this.logoutUser.bind(this);
+  }
 
-    render() {
-        const { login } = this.state;        
-            return (
-                <div className="nav">
-                    <div className="logo"></div>
-                    <div className="menu">
-                        <ul>
-                            <li><Link to="/add">Add Item</Link></li>
+  logoutUser = () => {
+    this.context.logout();
+    this.setState({
+      isLoggedIn: !this.state.isLoggedin,
+    });
+  };
 
-                            <li><Link to="/login" onClick={() => this.logoutUser()}>{TokenService.hasAuthToken() ? "Logout" : "Login"}</Link></li>
+  render() {
+    const { login } = this.state;
+    return (
+      <div className='nav'>
+        <div className='logo'></div>
+        <div className='menu'>
+          <ul>
+            {TokenService.hasAuthToken() ? (
+              <li>
+                <Link to='/add'>Add Item</Link>
+              </li>
+            ) : (
+              ''
+            )}
 
-  
-                        </ul>
-                    </div>
-                </div>
-            )
-        }
-    }
+            <li>
+              <Link to='/login' onClick={() => this.logoutUser()}>
+                {TokenService.hasAuthToken() ? 'Logout' : 'Login'}
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    );
+  }
+}
